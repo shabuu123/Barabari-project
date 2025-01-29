@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { Heading } from './components/Heading'
 import Feature from './components/Feature'
-import { Chatpot } from './components/Chatpot'
+import { Chats } from './components/Chats'
+import { Website} from './components/Website'
+// import { Website2} from './components/Website2'
 import './App.css'
 
 
@@ -10,7 +12,9 @@ function App() {
 
   return (
     <>
-    <Chatpot/>
+    <Chats/>
+    <Website/>
+    {/* <Website2/> */}
       <Heading />
       <div>
         <h1 className='featureH1'>Featured Projects</h1>

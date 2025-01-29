@@ -1,14 +1,14 @@
-
 import React, { useState } from "react";
-import "../style.css/Chatpot.css";
-
-export const Chatpot = () => {
+import "../style.css/Chats.css"
+export const Chats = () => {
   const [showChatPage, setShowChatPage] = useState(false);
 
+  // Function to handle button click
   const handleChatClick = () => {
     setShowChatPage(true);
   };
 
+  // Function to go back to the main page
   const handleBackClick = () => {
     setShowChatPage(false);
   };
@@ -43,11 +43,13 @@ export const Chatpot = () => {
         </div>
       ) : (
         <div className="chatPage">
-          <button className="backButton" onClick={handleBackClick}>
-            Back
-          </button>
           <div className="chatContainer">
-            <img src="search.jpeg" alt="search img" />
+            <div className="backChat">
+              <div onClick={handleBackClick}>|-</div>
+              <div> Chat with us  </div>
+              <div onClick={handleBackClick}>x</div>
+            </div>
+            <img src="search.jpeg" alt="" />
             <h1>Hi There!</h1>
             <p>Want to work with us?</p>
             <p>
@@ -55,11 +57,17 @@ export const Chatpot = () => {
               couple of minutes, we would love to hear more.
             </p>
             <button className="startChatButton">Start Chat</button>
-            <p>Got any other queries?</p>
-            <p>Please drop us an email at barabaricollective@gmail.com</p>
+            <div className="startChatButtonPara">
+              <h2>Got any other queries?</h2>
+              <p>Please drop us an email at </p>
+              <a href="">barabaricollective@gmail.com</a>
+            </div>
           </div>
         </div>
-      )}
+      ) 
+      }
     </div>
+
   );
+
 };
